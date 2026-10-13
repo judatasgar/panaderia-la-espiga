@@ -1,0 +1,102 @@
+/* ==========================================================================
+   index.html · pedidos.html · gracias.html
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. Variables
+   ========================================================================== */
+
+:root {
+  /* Colores */
+  --color-fondo: #fff8ee;
+  --color-superficie: #ffffff;
+  --color-suave: #f6ead6;
+  --color-texto: #3e2a1e;
+  --color-texto-suave: #6b5446;
+  --color-primario: #c8892b;
+  --color-primario-oscuro: #9a6516;
+  --color-acento: #b5523b;
+  --color-claro: #fff8ee;
+  --color-borde: #e4d3b8;
+  --color-sombra: rgba(62, 42, 30, 0.15);
+  --color-velo: rgba(62, 42, 30, 0.55);
+
+  /* Gradiente de marca: trigo → terracota */
+  --gradiente-marca: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+
+  /* Tipografía */
+  --fuente-titulos: Georgia, "Times New Roman", serif;
+  --fuente-texto: system-ui, "Segoe UI", Arial, sans-serif;
+  --texto-base: 1rem;
+  --texto-pequeno: 0.875rem;
+  --texto-h3: 1.25rem;
+  --texto-h2: 1.75rem;
+  --texto-h1: 2.75rem;
+
+  /* Espacios */
+  --espacio-xs: 0.25rem;
+  --espacio-s: 0.5rem;
+  --espacio-m: 1rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 4rem;
+
+  /* Bordes y medidas */
+  --radio: 0.75rem;
+  --ancho-maximo: 72rem;
+}
+
+
+/*
+   2. Base y tipografía
+    */
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--texto-h1);
+}
+
+h2 {
+  font-size: var(--texto-h2);
+}
+
+h3 {
+  font-size: var(--texto-h3);
+}
+
+a {
+  color: var(--color-primario-oscuro);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+s {
+  color: var(--color-texto-suave);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
