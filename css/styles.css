@@ -630,3 +630,68 @@ a:focus-visible,
 .campo:focus-within .campo__etiqueta {
   color: var(--color-primario-oscuro);
 }
+
+
+/* 
+   16. Animación
+    */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portada__titulo,
+.portada__lema {
+  animation: aparecer 0.8s ease-out both;
+}
+
+.portada__lema {
+  animation-delay: 0.2s;
+}
+
+
+/* 
+   17. Celular (hasta 40rem = 640 px)
+    */
+
+@media (max-width: 40rem) {
+  :root {
+    --texto-h1: 2rem;
+    --texto-h2: 1.5rem;
+  }
+
+  .encabezado,
+  .seccion,
+  .pie {
+    padding: var(--espacio-m);
+  }
+
+  .portada {
+    padding: var(--espacio-l) var(--espacio-m);
+  }
+
+  .tarjeta,
+  .opinion {
+    display: block;
+    width: auto;
+    margin: 0 0 var(--espacio-m);
+  }
+
+  .info__bloque {
+    display: block;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .formulario__grupo {
+    padding: var(--espacio-m);
+  }
+}
