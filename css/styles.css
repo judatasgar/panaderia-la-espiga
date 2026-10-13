@@ -1,4 +1,5 @@
 /* ==========================================================================
+   Panadería La Espiga · hoja de estilos compartida
    index.html · pedidos.html · gracias.html
    ========================================================================== */
 
@@ -47,9 +48,9 @@
 }
 
 
-/*
+/* ==========================================================================
    2. Base y tipografía
-    */
+   ========================================================================== */
 
 body {
   margin: 0;
@@ -99,4 +100,304 @@ s {
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+/*
+   3. Encabezado y navegación
+    */
+
+.encabezado {
+  padding: var(--espacio-m) var(--espacio-l);
+  background-color: var(--color-texto);
+  border-bottom: 4px solid var(--color-primario);
+  text-align: center;
+}
+
+.encabezado a {
+  color: var(--color-claro);
+  text-decoration: none;
+}
+
+.encabezado__logo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.encabezado__logo::before {
+  content: "🌾 ";
+}
+
+.menu__lista {
+  margin: var(--espacio-s) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__item {
+  display: inline-block;
+  margin: var(--espacio-xs);
+}
+
+.menu__enlace {
+  display: inline-block;
+  padding: var(--espacio-xs) var(--espacio-s);
+  border-radius: var(--radio);
+  font-size: var(--texto-pequeno);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu .menu__enlace--destacado {
+  background-color: var(--color-primario);
+  color: var(--color-texto);
+  font-weight: bold;
+}
+
+
+/* 
+   4. Portada
+    */
+
+.portada {
+  padding: var(--espacio-xl) var(--espacio-l);
+  background-color: var(--color-texto);
+  background-image: linear-gradient(var(--color-velo), var(--color-velo)), url("../images/portada.jpg");
+  background-position: center;
+  background-size: cover;
+  color: var(--color-claro);
+  text-align: center;
+}
+
+.portada--interna {
+  padding: var(--espacio-l);
+  background-image: var(--gradiente-marca);
+}
+
+.portada__titulo {
+  margin: 0 0 var(--espacio-m);
+}
+
+.portada__lema {
+  max-width: 36rem;
+  margin: 0 auto var(--espacio-l);
+  font-size: 1.125rem;
+}
+
+.portada--interna .portada__lema {
+  margin-bottom: 0;
+}
+
+.portada a:not(.boton) {
+  color: var(--color-claro);
+}
+
+
+/* 
+   5. Botones
+    */
+
+.boton {
+  display: inline-block;
+  margin: var(--espacio-xs);
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-primario-oscuro);
+  border-radius: var(--radio);
+  background: var(--gradiente-marca);
+  color: var(--color-claro);
+  font: bold var(--texto-base) var(--fuente-texto);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton--secundario {
+  background: transparent;
+  color: var(--color-primario-oscuro);
+}
+
+
+/*
+   6. Secciones
+    */
+
+.seccion {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: var(--espacio-l);
+}
+
+.seccion__titulo {
+  margin: 0 0 var(--espacio-m);
+  color: var(--color-texto);
+}
+
+.seccion__titulo::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: var(--espacio-s);
+  border-radius: 2px;
+  background-image: var(--gradiente-marca);
+}
+
+.seccion__intro {
+  margin: var(--espacio-m) 0 var(--espacio-l);
+  color: var(--color-texto-suave);
+}
+
+
+/* 
+   7. Tarjetas de productos
+    */
+
+.tarjetas {
+  text-align: center;
+}
+
+.tarjeta {
+  display: inline-block;
+  position: relative;
+  width: 13.5rem;
+  margin: var(--espacio-s);
+  padding: var(--espacio-m);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background-color: var(--color-superficie);
+  box-shadow: 0 4px 12px var(--color-sombra);
+  overflow: hidden;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tarjeta__imagen {
+  display: block;
+  width: 100%;
+  height: 10rem;
+  border-radius: calc(var(--radio) / 2);
+  object-fit: cover;
+}
+
+.tarjeta__titulo {
+  margin: var(--espacio-m) 0 var(--espacio-s);
+}
+
+.tarjeta__texto {
+  margin: 0 0 var(--espacio-s);
+  color: var(--color-texto-suave);
+  font-size: var(--texto-pequeno);
+}
+
+.tarjeta__precio {
+  margin: 0;
+  color: var(--color-primario-oscuro);
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.tarjeta--promo {
+  border-color: var(--color-acento);
+  border-top-width: 6px;
+}
+
+.tarjeta--promo .tarjeta__precio strong {
+  color: var(--color-acento);
+}
+
+.tarjeta__etiqueta {
+  position: absolute;
+  top: var(--espacio-l);
+  right: 0;
+  margin: 0;
+  padding: var(--espacio-xs) var(--espacio-s);
+  border-radius: var(--radio) 0 0 var(--radio);
+  background-color: var(--color-acento);
+  color: var(--color-claro);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* 
+   9. Opiniones
+    */
+
+.opinion {
+  display: inline-block;
+  width: 18rem;
+  margin: var(--espacio-s);
+  padding: var(--espacio-m) var(--espacio-l);
+  border-radius: var(--radio);
+  background-color: var(--color-superficie);
+  box-shadow: 0 2px 8px var(--color-sombra);
+  vertical-align: top;
+}
+
+.opinion__texto {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+}
+
+.opinion__texto::before {
+  content: "“";
+  display: block;
+  height: 2rem;
+  color: var(--color-primario);
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.opinion__autor {
+  margin-top: var(--espacio-s);
+  color: var(--color-texto-suave);
+  font-size: var(--texto-pequeno);
+}
+
+
+/* 
+   10. Ubicación
+    */
+
+.ubicacion__mapa {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  height: 20rem;
+  border: 0;
+  border-radius: var(--radio);
+}
+
+.ubicacion__datos {
+  max-width: 40rem;
+}
+
+
+/* 
+   13. Pie de página
+    */
+
+.pie {
+  padding: var(--espacio-l);
+  background-color: var(--color-texto);
+  color: var(--color-claro);
+  font-size: var(--texto-pequeno);
+  text-align: center;
+}
+
+.pie a {
+  color: inherit;
+}
+
+.pie__contacto {
+  font-style: normal;
+}
+
+.pie__copy {
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
