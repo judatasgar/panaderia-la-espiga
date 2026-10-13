@@ -100,6 +100,67 @@
       </div>
     </section>
 
+    <section class="seccion" id="pedido">
+      <h2 class="seccion__titulo">Haz tu pedido</h2>
+      <p class="seccion__intro">Llena el formulario y te llamamos para confirmar. Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
+
+      <form class="formulario" action="gracias.html" method="get">
+        <fieldset class="formulario__grupo">
+          <legend class="formulario__leyenda">Tus datos</legend>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="nombre">Nombre completo <span class="obligatorio">*</span></label>
+            <input class="campo__control" type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="telefono">Teléfono <span class="obligatorio">*</span></label>
+            <input class="campo__control" type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="300 000 0000" required>
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="correo">Correo electrónico</label>
+            <input class="campo__control" type="email" id="correo" name="correo" autocomplete="email" placeholder="nombre@correo.com">
+          </div>
+        </fieldset>
+
+        <fieldset class="formulario__grupo">
+          <legend class="formulario__leyenda">Tu pedido</legend>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="producto">Producto <span class="obligatorio">*</span></label>
+            <select class="campo__control" id="producto" name="producto" required>
+              <option value="">Elige un producto</option>
+              <option value="pan-campesino">Pan campesino</option>
+              <option value="pan-alinado">Pan aliñado</option>
+              <option value="almojabana">Almojábana</option>
+              <option value="croissant">Croissant</option>
+              <option value="galletas-avena">Galletas de avena</option>
+              <option value="torta-porcion">Torta tres leches (porción)</option>
+              <option value="torta-entera">Torta tres leches entera</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="cantidad">Cantidad (unidades) <span class="obligatorio">*</span></label>
+            <input class="campo__control" type="number" id="cantidad" name="cantidad" min="1" max="100" value="1" required>
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="fecha">Fecha de recogida <span class="obligatorio">*</span></label>
+            <input class="campo__control" type="date" id="fecha" name="fecha" required>
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta" for="notas">Notas para la panadería</label>
+            <textarea class="campo__control campo__control--area" id="notas" name="notas" rows="4" placeholder="Ej.: torta con el mensaje «Feliz cumpleaños, Sofi»"></textarea>
+          </div>
+        </fieldset>
+
+        <button class="boton" type="submit">Enviar pedido</button>
+      </form>
+    </section>
+
   </main>
 
   <footer class="pie">
