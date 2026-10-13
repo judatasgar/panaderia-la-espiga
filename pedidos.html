@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista de precios de la Panadería La Espiga por unidad, media docena y docena, y formulario para hacer tu pedido y recogerlo en la panadería.">
+  <title>Precios y pedidos · Panadería La Espiga</title>
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="encabezado__logo" href="index.html">La Espiga</a>
+    <nav class="menu" aria-label="Navegación principal">
+      <ul class="menu__lista">
+        <li class="menu__item"><a class="menu__enlace" href="index.html#productos">Productos</a></li>
+        <li class="menu__item"><a class="menu__enlace" href="index.html#informacion">Horarios</a></li>
+        <li class="menu__item"><a class="menu__enlace" href="index.html#opiniones">Opiniones</a></li>
+        <li class="menu__item"><a class="menu__enlace" href="index.html#ubicacion">Cómo llegar</a></li>
+        <li class="menu__item"><a class="menu__enlace menu__enlace--destacado" href="pedidos.html" aria-current="page">Precios y pedidos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="portada portada--interna" id="inicio">
+      <h1 class="portada__titulo">Precios y pedidos</h1>
+      <p class="portada__lema">Encarga hoy y recoge mañana recién horneado. Saltar a: <a href="#precios">precios</a> · <a href="#pedido">formulario</a>.</p>
+    </section>
+
+    <section class="seccion" id="precios">
+      <h2 class="seccion__titulo">Lista de precios</h2>
+
+      <div class="tabla-contenedor">
+        <table class="precios">
+          <caption class="precios__titulo">Precios vigentes en pesos colombianos (<abbr title="Peso colombiano">COP</abbr>)</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Categoría</th>
+              <th scope="col" rowspan="2">Producto</th>
+              <th scope="colgroup" colspan="3">Precio por cantidad</th>
+            </tr>
+            <tr>
+              <th scope="col">Unidad</th>
+              <th scope="col">Media docena</th>
+              <th scope="col">Docena</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Panes</th>
+              <td>Pan campesino</td>
+              <td>$6.000</td>
+              <td>$33.000</td>
+              <td>$62.000</td>
+            </tr>
+            <tr>
+              <td>Pan aliñado</td>
+              <td>$1.500</td>
+              <td>$8.500</td>
+              <td>$16.000</td>
+            </tr>
+            <tr>
+              <td>Almojábana</td>
+              <td>$2.500</td>
+              <td>$14.000</td>
+              <td>$27.000</td>
+            </tr>
+            <tr>
+              <th scope="rowgroup" rowspan="2">Pastelería</th>
+              <td>Croissant</td>
+              <td>$4.500</td>
+              <td>$25.000</td>
+              <td>$48.000</td>
+            </tr>
+            <tr>
+              <td>Galletas de avena</td>
+              <td>$2.000</td>
+              <td>$11.000</td>
+              <td>$21.000</td>
+            </tr>
+            <tr>
+              <th scope="rowgroup" rowspan="2">Tortas</th>
+              <td>Torta tres leches (porción)</td>
+              <td><s>$8.000</s> <strong>$6.500</strong></td>
+              <td>$38.000</td>
+              <td>$72.000</td>
+            </tr>
+            <tr>
+              <td>Torta tres leches entera (20 porciones)</td>
+              <td colspan="3">$120.000 · solo por encargo, con 2 días de anticipación</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5">Precios con <abbr title="Impuesto al Valor Agregado">IVA</abbr> incluido. La promoción de la torta tres leches aplica solo por porción.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <address class="pie__contacto">
+      Panadería La Espiga · Carrera 27 # 45-18, Bucaramanga<br>
+      Teléfono: <a href="tel:+576070000000">(607) 000 0000</a>
+    </address>
+    <p class="pie__copy">© 2026 La Espiga</p>
+  </footer>
+
+</body>
+</html>
