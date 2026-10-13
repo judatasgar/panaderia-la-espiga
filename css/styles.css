@@ -103,7 +103,7 @@ img {
 }
 
 
-/*
+/* 
    3. Encabezado y navegación
     */
 
@@ -217,7 +217,7 @@ img {
 }
 
 
-/*
+/* 
    6. Secciones
     */
 
@@ -322,6 +322,64 @@ img {
 
 
 /* 
+   8. Información útil: listas y dato
+    */
+
+.info__bloque {
+  display: inline-block;
+  width: 45%;
+  margin-right: 4%;
+  vertical-align: top;
+}
+
+.info__titulo {
+  margin-top: 0;
+}
+
+.lista {
+  padding-left: 1.25rem;
+  list-style: square;
+}
+
+.pasos {
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+.lista__item,
+.pasos__item {
+  margin-bottom: var(--espacio-s);
+}
+
+.lista__item::marker {
+  color: var(--color-primario);
+}
+
+.pasos__item::marker {
+  color: var(--color-acento);
+  font-family: var(--fuente-titulos);
+  font-weight: bold;
+}
+
+.dato {
+  max-width: 40rem;
+  margin: var(--espacio-l) 0 0;
+  padding: var(--espacio-m) var(--espacio-l);
+  border-left: 6px solid var(--color-primario);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  background-color: var(--color-suave);
+}
+
+.dato__titulo {
+  margin: 0 0 var(--espacio-s);
+}
+
+.dato__texto {
+  margin: 0;
+}
+
+
+/* 
    9. Opiniones
     */
 
@@ -373,6 +431,106 @@ img {
 
 .ubicacion__datos {
   max-width: 40rem;
+}
+
+
+/* 
+   11. Tabla de precios
+    */
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+.precios {
+  width: 100%;
+  min-width: 36rem;
+  border-collapse: collapse;
+  background-color: var(--color-superficie);
+}
+
+.precios__titulo {
+  padding: var(--espacio-s);
+  color: var(--color-texto-suave);
+  font-size: var(--texto-pequeno);
+  caption-side: bottom;
+}
+
+.precios th,
+.precios td {
+  padding: var(--espacio-s) var(--espacio-m);
+  border: 1px solid var(--color-borde);
+  text-align: left;
+}
+
+.precios thead th {
+  background-color: var(--color-texto);
+  color: var(--color-claro);
+  text-align: center;
+}
+
+.precios tbody th {
+  background-color: var(--color-suave);
+  font-family: var(--fuente-titulos);
+}
+
+.precios tfoot td {
+  color: var(--color-texto-suave);
+  font-size: var(--texto-pequeno);
+}
+
+
+/* 
+   12. Formulario
+    */
+
+.formulario {
+  max-width: 40rem;
+}
+
+.formulario__grupo {
+  margin: 0 0 var(--espacio-l);
+  padding: var(--espacio-m) var(--espacio-l);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  background-color: var(--color-superficie);
+}
+
+.formulario__leyenda {
+  padding: 0 var(--espacio-s);
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-h3);
+}
+
+.campo {
+  margin-bottom: var(--espacio-m);
+}
+
+.campo__etiqueta {
+  display: block;
+  margin-bottom: var(--espacio-xs);
+  font-weight: bold;
+}
+
+.campo__control {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 30rem;
+  padding: var(--espacio-s);
+  border: 1px solid var(--color-borde);
+  border-bottom: 3px solid var(--color-primario);
+  border-radius: calc(var(--radio) / 2);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font: inherit;
+}
+
+.campo__control--area {
+  resize: vertical;
+}
+
+.obligatorio {
+  color: var(--color-acento);
 }
 
 
