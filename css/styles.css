@@ -559,3 +559,74 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+
+/* 
+   14. Selectores estructurales, de atributo y pseudoelementos
+    */
+
+/* Secciones pares del main: franja de color para separar visualmente */
+main > .seccion:nth-child(even) {
+  background-color: var(--color-suave);
+}
+
+/* Opiniones: fondo múltiple (velo de color + textura de harina) */
+#opiniones {
+  background-color: var(--color-fondo);
+  background-image: linear-gradient(rgba(255, 248, 238, 0.85), rgba(255, 248, 238, 0.85)), url("../images/fondo-harina.jpg");
+  background-size: cover;
+}
+
+/* Filas alternas de la tabla */
+.precios tbody tr:nth-child(even) td {
+  background-color: var(--color-fondo);
+}
+
+/* Enlaces que abren otra pestaña: se marcan con una flecha */
+a[target="_blank"]::after {
+  content: " ↗";
+}
+
+
+/* 
+   15. Interacción
+    */
+
+.menu__enlace:hover {
+  background-color: rgba(255, 248, 238, 0.15);
+}
+
+.menu .menu__enlace--destacado:hover {
+  background-color: var(--color-claro);
+}
+
+.boton:hover {
+  border-color: var(--color-texto);
+  box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.boton--secundario:hover {
+  background: var(--color-suave);
+}
+
+.tarjeta:hover {
+  border-color: var(--color-primario);
+  box-shadow: 0 8px 20px var(--color-sombra);
+}
+
+a:focus-visible,
+.boton:focus-visible,
+.campo__control:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+/* La sección a la que lleva un ancla (#productos, #pedido…) se resalta */
+.seccion:target .seccion__titulo {
+  color: var(--color-acento);
+}
+
+/* Mientras se escribe en un campo, su etiqueta cambia de color */
+.campo:focus-within .campo__etiqueta {
+  color: var(--color-primario-oscuro);
+}
