@@ -2,9 +2,7 @@
 
 ### El negocio
 
-La Espiga es una panadería de barrio. Sin embargo, los clientes preguntan una y otra vez por
-precios y horarios, y en las horas de más movimiento no alcanzan a responder todos los mensajes,
-así que se pierden pedidos.
+La Espiga es una panadería de barrio. Sin embargo, los clientes preguntan una y otra vez por precios y horarios, y en las horas de más movimiento no alcanzan a responder todos los mensajes, así que se pierden pedidos.
 
 ### Para quién es el sitio
 
@@ -30,13 +28,13 @@ Las tres comparten el mismo encabezado, la misma navegación y el mismo pie de p
 
 ### Boceto
 
-Boceto digital de la distribución en escritorio (wireframe). En celular, las mismas secciones se
+Boceto hecho a mano de la distribución en escritorio. En celular, las mismas secciones se
 apilan en una sola columna.
 
 **index.html**
 
-![Boceto de index.html](capturas\boceto-index.jpeg)
+![Boceto de index.html](capturas/boceto-index.jpeg)
 
 **pedidos.html y gracias.html**
 
-![Boceto de pedidos.html](capturas\boceto-pedidos.jpeg)
+![Boceto de pedidos.html](capturas/boceto-pedidos.jpeg)
